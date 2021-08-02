@@ -165,3 +165,24 @@ def plot(x):
 def montage_plot(x):
     x = np.pad(x, pad_width=((0, 0), (1, 1), (1, 1)), mode='constant', constant_values=0)
     plot(montage(x))
+    
+    
+    
+    
+    
+    
+    
+def Truncated_Normal(size):
+
+    u1 = torch.rand(size)*(1-np.exp(-2)) + np.exp(-2)
+    u2 = torch.rand(size)
+    z  = torch.sqrt(-2*torch.log(u1)) * torch.cos(2*np.pi*u2)
+
+    return z    
+    
+    
+    
+    
+    
+    
+    
