@@ -24,6 +24,19 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.colors import LightSource
 from torchvision import models, transforms
 
+import os
+import torch
+import torchvision
+import torch.nn as nn
+from torchvision import transforms
+from torchvision.utils import save_image
+from torch.autograd import Variable
+import pylab
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader
+from torchvision.datasets import MNIST
+import torchvision.utils
+
 
 from random import random
 from random import uniform
