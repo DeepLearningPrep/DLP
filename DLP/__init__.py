@@ -72,3 +72,24 @@ import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from torchvision.datasets import MNIST
 import torchvision.utils
+
+
+########################################################################
+
+
+def GPU(data):
+    return torch.tensor(data, requires_grad=True, dtype=torch.float, device=torch.device('cuda'))
+
+def GPU_data(data):
+    return torch.tensor(data, requires_grad=False, dtype=torch.float, device=torch.device('cuda'))
+  
+ 
+def cross_entropy(outputs, labels):            
+    return -torch.sum(softmax(outputs).log()[range(outputs.size()[0]), labels.long()])/outputs.size()[0]    
+
+
+  
+def softmax(x):
+    s1 = torch.exp(x - torch.max(x,1)[0][:,None])
+    s = s1 / s1.sum(1)[:,None]
+    return s  
