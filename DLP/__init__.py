@@ -86,6 +86,31 @@ from torch.utils.data import DataLoader
 from torchvision.datasets import MNIST
 import torchvision.utils
 
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+import matplotlib.cbook as cbook
+import numpy as np
+import scipy.ndimage
+import tensorflow as tf
+from scipy.ndimage.filters import gaussian_filter 
+# from scipy.misc import imresize
+from scipy import signal
+from skimage import io
+from sklearn.preprocessing import scale
+from PIL import Image
+import time
+import torch
+import numpy as np
+import torch.nn as nn
+from scipy import stats
+from skimage import io as io
+import matplotlib.pyplot as plt
+import torch.nn.functional as F
+from skimage.util import montage
+from torch.nn.functional import *
+from torch.autograd import Variable
+from torchvision import datasets, transforms
+
 
 import os
 import sys
