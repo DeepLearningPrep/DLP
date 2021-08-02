@@ -39,7 +39,6 @@ from matplotlib.colors import LightSource
 
 import matplotlib.pyplot as plt
 import numpy as np
-!pip install pillow
 from skimage import io as io
 from skimage.util import view_as_blocks
 from skimage.transform import resize
