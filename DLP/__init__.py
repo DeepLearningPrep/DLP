@@ -162,6 +162,10 @@ def softmax(x):
     return s  
 
 
+def acc(out,y):
+    with torch.no_grad():
+        return (torch.sum(torch.max(out,1)[1] == y).item())/y.shape[0]
+
 
 def plot(x):
     if type(x) == torch.Tensor :
