@@ -197,7 +197,7 @@ def Truncated_Normal(size):
     u1 = torch.rand(size)*(1-np.exp(-2)) + np.exp(-2)
     u2 = torch.rand(size)
     z  = torch.sqrt(-2*torch.log(u1)) * torch.cos(2*np.pi*u2)
-
+    z = 0.1*z
     return z    
     
     
