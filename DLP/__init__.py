@@ -59,3 +59,17 @@ rc('animation', html='html5')
 import numpy as np
 from scipy import ndimage
 import matplotlib.pyplot as plt
+
+
+import os
+import torch
+import torchvision
+import torch.nn as nn
+from torchvision import transforms
+from torchvision.utils import save_image
+from torch.autograd import Variable
+import pylab
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader
+from torchvision.datasets import MNIST
+import torchvision.utils
