@@ -185,4 +185,27 @@ def Truncated_Normal(size):
     
     
     
-    
+def load_MNIST(dataset):
+
+    if dataset == "MNIST":
+        train_set = datasets.MNIST('./data', train=True, download=True)
+        test_set = datasets.MNIST('./data', train=False, download=True)
+
+    if dataset == "KMNIST":
+        train_set = datasets.KMNIST('./data', train=True, download=True)
+        test_set = datasets.KMNIST('./data', train=False, download=True)
+
+    if dataset == "FMNIST":
+        train_set = datasets.FashionMNIST('./data', train=True, download=True)
+        test_set = datasets.FashionMNIST('./data', train=False, download=True)
+
+
+    X = train_set.data.numpy()
+    X_test = test_set.data.numpy()
+    Y = train_set.targets.numpy()
+    Y_test = test_set.targets.numpy()
+
+    X = X[:,None,:,:]/255
+    X_test = X_test[:,None,:,:]/255
+
+    return X,Y,X_test,Y_test    
