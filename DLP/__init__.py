@@ -35,3 +35,27 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 from matplotlib.colors import LightSource
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+!pip install pillow
+from skimage import io as io
+from skimage.util import view_as_blocks
+from skimage.transform import resize
+from scipy import signal
+import torch.nn.functional as F
+from torch.nn.functional import *
+import torch
+import torch.nn as nn
+import torchvision
+import torchvision.transforms as transforms
+import time
+from matplotlib import animation, rc
+from IPython.display import HTML
+rc('animation', html='html5')
+
+
+import numpy as np
+from scipy import ndimage
+import matplotlib.pyplot as plt
