@@ -141,6 +141,9 @@ from sklearn.linear_model import LogisticRegression as LR
 from torch.utils.data import DataLoader, TensorDataset, random_split
 
 
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'wandb'])
+import wandb as wb
+
 ########################################################################
 
 
