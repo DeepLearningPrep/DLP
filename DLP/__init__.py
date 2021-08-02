@@ -93,3 +93,21 @@ def softmax(x):
     s1 = torch.exp(x - torch.max(x,1)[0][:,None])
     s = s1 / s1.sum(1)[:,None]
     return s  
+
+
+
+def plot(x):
+    if type(x) == torch.Tensor :
+        x = x.cpu().detach().numpy()
+
+    fig, ax = plt.subplots()
+    im = ax.imshow(x, cmap = 'gray')
+    ax.axis('off')
+    fig.set_size_inches(10, 10)
+    plt.show()
+    
+    
+    
+def montage_plot(x):
+    x = np.pad(x, pad_width=((0, 0), (1, 1), (1, 1)), mode='constant', constant_values=0)
+    plot(montage(x))
