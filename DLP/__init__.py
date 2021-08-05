@@ -180,7 +180,7 @@ from skimage.util import montage
 
 
 
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'cloud-tpu-client==0.10', 'https://storage.googleapis.com/tpu-pytorch/wheels/torch_xla-1.7-cp36-cp36m-linux_x86_64.whl'])    
+os.system("pip install cloud-tpu-client==0.10 https://storage.googleapis.com/tpu-pytorch/wheels/torch_xla-1.7-cp36-cp36m-linux_x86_64.whl")
 import torch
 import torch_xla
 import torch_xla.core.xla_model as xm
