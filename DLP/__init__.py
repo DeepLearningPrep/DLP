@@ -170,7 +170,6 @@ from torch.utils.data import DataLoader, TensorDataset, random_split
 
 
 
-from __future__ import division
 import numpy as np
 import sklearn.preprocessing as skp
 from timeit import default_timer as timer
