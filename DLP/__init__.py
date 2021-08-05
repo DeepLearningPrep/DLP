@@ -166,10 +166,50 @@ from sklearn.linear_model import LogisticRegression as LR
 from torch.utils.data import DataLoader, TensorDataset, random_split
 
 
+
+
+
+
+from __future__ import division
+import numpy as np
+import sklearn.preprocessing as skp
+from timeit import default_timer as timer
+import matplotlib.pyplot as plt
+import scipy.io as sio
+from skimage.util import montage
+
+
+
+
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'cloud-tpu-client==0.10 https://storage.googleapis.com/tpu-pytorch/wheels/torch_xla-1.7-cp36-cp36m-linux_x86_64.whl'])    
+import torch
+import torch_xla
+import torch_xla.core.xla_model as xm
+
+
+
+
+
+
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'wandb'])
 import wandb as wb
 
 ########################################################################
+
+
+def plot(x):
+    fig, ax = plt.subplots()
+    im = ax.imshow(x, cmap = 'gray')
+    ax.axis('off')
+    fig.set_size_inches(18, 10)
+    plt.show()
+    
+def bar(a):
+    x = np.arange(a.shape[0])
+    fig, ax = plt.subplots()
+    plt.bar(x, a)
+    # plt.xticks(x, ('0', '1', '2', '3', '4','5', '6', '7', '8', '9'))
+    plt.show()
 
 
 def GPU(data):
